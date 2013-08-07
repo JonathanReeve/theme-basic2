@@ -28,9 +28,9 @@ echo head_css();
 	<h5><a href="<?php echo html_escape(url('exhibits')); ?>">Back to Exhibits</a></h5>
 	<h1><?php echo exhibit_builder_link_to_exhibit($exhibit); ?></h1>
 
-    <div id="exhibit-nav">
-    	<?php echo exhibit_builder_section_nav();?>
-    </div>
+        <nav class="top">
+            <?php echo public_nav_main(); ?>
+        </nav>
 
     <div id="content">
     	<?php echo exhibit_builder_page_nav(); ?>
