@@ -14,19 +14,18 @@ queue_css_file('screen');
 echo head_css(); 
 ?> 
 
-
 <!-- JavaScripts -->
     <?php echo head_js(); ?>
 
 <!-- Plugin Stuff -->
-<?php plugin_header(); ?>
+    <?php fire_plugin_hook('public_head', array('view'=>$this)); ?>
 
 </head>
 
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
 
 <div id="wrap">
-	<h5><a href="<?php echo html_escape(uri('exhibits')); ?>">Back to Exhibits</a></h5>
+	<h5><a href="<?php echo html_escape(url('exhibits')); ?>">Back to Exhibits</a></h5>
 	<h1><?php echo exhibit_builder_link_to_exhibit($exhibit); ?></h1>
 
     <div id="exhibit-nav">
