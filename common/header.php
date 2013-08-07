@@ -8,16 +8,22 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <!-- Stylesheets -->
-<link rel="stylesheet" media="screen" href="<?php echo html_escape(exhibit_builder_exhibit_css('screen')); ?>" />
+
+<?php 
+queue_css_file('screen'); 
+echo head_css(); 
+?> 
+
 
 <!-- JavaScripts -->
-<?php echo js('prototype'); ?>
+    <?php echo head_js(); ?>
 
 <!-- Plugin Stuff -->
 <?php plugin_header(); ?>
 
 </head>
-<body<?php echo $bodyclass ? ' class="'.$bodyclass.'"' : ''; ?>  id="<?php echo html_escape($exhibit->theme); ?>">
+
+<?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
 
 <div id="wrap">
 	<h5><a href="<?php echo html_escape(uri('exhibits')); ?>">Back to Exhibits</a></h5>
