@@ -1,4 +1,4 @@
-<?php exhibit_builder_exhibit_head(array('bodyclass' => 'exhibits')); ?>
+<?php head(array('bodyclass' => 'exhibits')); ?>
 
 <div class="exhibit-description">
 	<?php echo $exhibit->description; ?>
@@ -16,4 +16,4 @@
 	<p><?php echo html_escape($exhibit->credits); ?></p>
 </div>
 
-<?php exhibit_builder_exhibit_foot(); ?>
+<?php foot(); ?>
